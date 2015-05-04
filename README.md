@@ -11,9 +11,9 @@ It has been initially developed on an Ubuntu Karmic box.
 
 ## REQUIREMENTS
 
-liblo0     - libOSC ligthweight library (as per Ubuntu distribution)
-libconfig8 - configuration library
-libowlsock - PhaseSpace library         (available when purchasing a PhaseSpase system)
++ liblo0     - libOSC ligthweight library (as per Ubuntu distribution)
++ libconfig8 - configuration library
++ libowlsock - PhaseSpace library         (available when purchasing a PhaseSpase system)
 
 ## LICENSE
 
