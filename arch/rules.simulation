@@ -1,0 +1,9 @@
+#
+# $Id: rules.simulation 14 2010-04-24 02:21:12Z nicb $
+#
+# you don't have a phasespace system at hand
+#
+TYPE=simulation
+SIMULATION_MODE=1
+LIB_SUFFIX=a
+TARGET_SUFFIX=-sym

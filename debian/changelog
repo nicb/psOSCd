@@ -1,0 +1,46 @@
+psoscd (0.13-1) unstable; urgency=low
+
+  * [upstream] added rigid body handling
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Wed,  3 Nov 2010 00:46:18 +0200
+
+psoscd (0.0.0-6lucid4) unstable; urgency=low
+
+  * [upstream] better puredata monitoring
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Thu,  7 May 2010 05:03:36 +0200
+
+psoscd (0.0.0-5lucid3) unstable; urgency=low
+
+  * [upstream] added -f (frequency) flag to regulate streaming
+  * [upstream] substantial change in marker tagging (now in the /m_xx format)
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Thu,  4 May 2010 22:12:18 +0200
+
+psoscd (0.0.0-4lucid2) unstable; urgency=low
+
+  * [upstream] added slave flag to make psOSCd work as a slave if required
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Wed,  5 May 2010 21:32:15 +0200
+
+psoscd (0.0.0-3lucid1) unstable; urgency=low
+
+  * packaged for lucid: this requires libstdc++5 to be installed (since it is not available on lucid
+    any longer, it may be installed from the jaunty distribution, which may be downloaded here:
+    http://de.archive.ubuntu.com/ubuntu/pool/universe/g/gcc-3.3/libstdc++5_3.3.6-17ubuntu1_i386.deb)
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Mon,  3 Mar 2010 20:15:20 +0200
+
+psoscd (0.0.0-2) unstable; urgency=low
+
+  * minor tweaks in testing code and Makefile
+  * moved the bin install directory to /usr/bin rather than /usr/sbin
+
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Sat,  1 Mar 2010 17:56:15 +0200
+
+psoscd (0.0.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>  Sat, 24 Apr 2010 04:30:03 +0200

@@ -1,0 +1,107 @@
+/*
+ * $Id: psOSCd.conf.rigid.example.debug 39 2010-11-02 23:42:57Z nicb $
+ *
+ * Example psOSCd configuration file
+ *
+ * Tune to fit your specific situation
+ *
+ * When the path is not set with the -c option, this file is looked up in the
+ * /etc/psOSCd directory
+ *
+ */
+
+/*
+ * include a common configuration file
+ */
+/* @include "doc/psOSCd.conf.example.common" */
+/*
+ * we're currently using the 1.3.2 version of libconfig which *DOES NOT*
+ * support the @include directive! We do inlining ourselves
+ * FIXME: this will be removed as soon as the 1.4 version of libconfig is made
+ * availabe on common linux distributions
+ */
+/*
+ * $Id: psOSCd.conf.rigid.example.debug 39 2010-11-02 23:42:57Z nicb $
+ *
+ * Example psOSCd configuration file
+ *
+ * Tune to fit your specific situation
+ *
+ * When the path is not set with the -c option, this file is looked up in the
+ * /etc/psOSCd directory
+ *
+ */
+
+/*
+ * osc_control_port is the port which psOSCd is listening to to receive OSC
+ * commands for operation. Since all other variables are can be set from OSC,
+ * this is the only *mandatory* variable to be set
+ */
+osc_control_port = 4599;
+
+/*
+ * phasespace_server may be either an IP number or a resolving domain name.
+ * Can be localhost when psOSCd is running on the same machine of the server
+ * Whatever that is, it must be in quotes.
+ */
+phasespace_server = "phasespace"; /* IP number or server name of the phasespace server */
+
+/*
+ * osc_server should be in the format <domain name or IP>:<port>
+ * Whatever that is, it must be in quotes.
+ */
+osc_server = "localhost:4600";   /*  IP number or server name  of the OSC server */
+
+/*
+ * frequency is the streaming frequency. It is a floating point number
+ * in the range is 0.0-480.0. Please NOTE: currently all PhaseSpace query
+ * calls are non-blocking polls - and setting the frequency to the maximum
+ * streaming value can be extremely taxing on the hosting platform.
+ */
+frequency = 60.0; /* streaming frequency */
+
+/*
+ * num_markers is the number of markers looked after, in sequence (0 to
+ * num_markers - 1)
+ */
+num_markers = 4; /* number of markers queried (0 -> num_markers - 1) */
+
+/*
+ * slave: run as slave (0 or 1, when set to 1 it should be queued to a primary client)
+ */
+slave = 0; /* slave flag (0 or 1) */
+
+/*
+ * rigid body descriptions:
+ * - each rigid body description is a list of group, each group being a
+ *   triplet of coordinate values as required by the PhaseSpace system.
+ * - so the complete description is a list of lists of groups, and the
+ *   variable num_bodies is deduced from it and set automatically
+ */
+/*
+ * PLEASE NOTE:
+ * if a rigid body configuration description exists, psOSCd will assume the
+ * phasespace to be doing rigid body tracking and it will therefore disable
+ * single marker tracking
+ */
+rigids =
+(
+    (
+        (    0,   300,    0 ),
+        (  300,     0,    0 ),
+        ( -300,     0,    0 ),
+        (    0,   -76, -200 )
+    ),
+    (
+        (    0,   100,    0 ),
+        (  100,     0,    0 ),
+        ( -100,     0,    0 ),
+        (    0,   -33,  -60 ),
+        (   33,   -66,  -20 )
+    )
+);
+
+/*
+ * verbose: log more informative messages into syslog when set to 1
+ */
+verbose = 1; /* verbose flag (0 or 1) */

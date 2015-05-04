@@ -1,0 +1,15 @@
+Source: psoscd
+Section: multimedia
+Priority: extra
+Maintainer: Nicola Bernardini <nicb@sme-ccppd.org>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.1
+Homepage: http://redmine.sampl-lab.org/projects/psoscd
+
+Package: psoscd
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: a PhaseSpace Impulse to OSC protocol middleware
+  psOSCd is a daemon that that will hook up to a PhaseSpace Impulse Motion Capture
+  server and transform its input into OSC (http://opensoundcontrol.org) data triplets
+  to be used by any OSC-capable real-time software.

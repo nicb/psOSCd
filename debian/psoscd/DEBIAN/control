@@ -1,0 +1,13 @@
+Package: psoscd
+Version: 0.13-1
+Architecture: amd64
+Maintainer: Nicola Bernardini <nicb@sme-ccppd.org>
+Installed-Size: 172
+Depends: libc6 (>= 2.3.4), libconfig8, libgcc1 (>= 1:4.1.1), liblo7 (>= 0.26~repack), libstdc++6 (>= 4.1.1)
+Section: multimedia
+Priority: extra
+Homepage: http://redmine.sampl-lab.org/projects/psoscd
+Description: a PhaseSpace Impulse to OSC protocol middleware
+  psOSCd is a daemon that that will hook up to a PhaseSpace Impulse Motion Capture
+  server and transform its input into OSC (http://opensoundcontrol.org) data triplets
+  to be used by any OSC-capable real-time software.

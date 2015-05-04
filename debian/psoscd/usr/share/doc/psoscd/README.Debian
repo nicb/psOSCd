@@ -1,0 +1,28 @@
+psOSCd for Debian
+---------------
+
+This package has been debianized using the how to info provided in:
+
+http://ubuntuforums.org/showthread.php?t=51003
+
+If you want to build a debian package out of all this.
+(stripped from http://www.debian-administration.org/articles/336)
+
+Install:
+
+dpkg-dev debhelper devscripts fakeroot linda
+
+Run:
+
+dpkg-buildpackage
+
+That should do. If you want a helper program, you may use:
+
+debuild
+
+instead.
+
+ -- Nicola Bernardini <nicb@sme-ccppd.org>, Sat, 24 Apr 2010 04:56:26 CEST
+
+----
+$Id: README.debian 42 2012-07-31 15:51:22Z nicb $
